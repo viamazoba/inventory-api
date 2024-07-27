@@ -3,7 +3,7 @@ import router from "./routes";
 import db from './config/db'
 import colors from 'colors'
 
-// COnectar a base de datos
+// Conectar a base de datos
 async function connectDB() {
     try {
 
