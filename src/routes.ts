@@ -33,7 +33,7 @@ router.put('/:id',
     body('price')
         .isNumeric().withMessage('Valor no válido')
         .notEmpty().withMessage('El precio del producto no puede ir vacío')
-        .custom( value => value > 0 ).withMessage('Precio no vàlido'),
+        .custom( value => value > 0 ).withMessage('Precio no válido'),
     body('availability').isBoolean().withMessage('Valor no válido').notEmpty().withMessage('La disponibilidad del producto no puede ser vacía'),
     handleInputErrors,
     updateProduct

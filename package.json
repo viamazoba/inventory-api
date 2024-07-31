@@ -4,10 +4,11 @@
   "description": "REST API for inventory project",
   "main": "index.js",
   "scripts": {
-    "test": "jest --detectOpenHandles",
     "dev": "nodemon --exec ts-node src/index.ts",
-    "build": "npx tsc",
-    "pretest": "ts-node ./src/data --clear"
+    "test": "jest --detectOpenHandles",
+    "test:coverage": "npm run pretest && jest --detectOpenHandles --coverage",
+    "pretest": "ts-node ./src/data --clear",
+    "build": "npx tsc"
   },
   "keywords": [
     "Typescript",
