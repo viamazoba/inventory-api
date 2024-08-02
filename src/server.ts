@@ -3,7 +3,7 @@ import router from "./routes";
 import db from './config/db'
 import colors from 'colors'
 import SwaggerUi from "swagger-ui-express";
-import swaggerSpect from "./config/swagger";
+import swaggerSpect, { swaggerUiOptions } from "./config/swagger";
 
 // Conectar a base de datos
 export async function connectDB() {
@@ -29,7 +29,8 @@ server.use(express.json())
 
 server.use('/api/products', router)
 
+
 // Docs
-server.use('/docs', SwaggerUi.serve, SwaggerUi.setup(swaggerSpect))
+server.use('/docs', SwaggerUi.serve, SwaggerUi.setup(swaggerSpect, swaggerUiOptions))
 
 export default server

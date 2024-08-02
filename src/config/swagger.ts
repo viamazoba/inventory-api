@@ -1,4 +1,5 @@
 import swaggerJSDoc from "swagger-jsdoc";
+import { SwaggerUiOptions } from "swagger-ui-express";
 
 const options: swaggerJSDoc.Options = {
     swaggerDefinition: {
@@ -19,4 +20,21 @@ const options: swaggerJSDoc.Options = {
 }
 
 const swaggerSpect = swaggerJSDoc(options)
+
+const swaggerUiOptions: SwaggerUiOptions = {
+    customCss: `
+        .topbar-wrapper .link {
+            content: url('https://www.svgrepo.com/show/269940/promotions-promo.svg');
+            height: 100px;
+            with: auto;
+        }
+        .swagger-ui .topbar {
+            background-color: #1b2853;
+        }
+    `,
+    customSiteTitle: 'Documentation API of Products'
+}
 export default swaggerSpect
+export {
+    swaggerUiOptions
+}
