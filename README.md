@@ -46,14 +46,27 @@ cd inventory-api
  npm run dev
 ```
 
+#### Note:
+
+To run this project properly, you need the version of Node specified in the .nvmrc file (v18.18.2).
+
 ### The Challenge :weight_lifting_man:
 
-The main challenge of this project is to develop a web application that allows efficient management of products. The key functionalities include:
+The main challenge of this project is to develop a RESTful API that allows for product management. To achieve this, various REST architectural principles were implemented:
 
-- Add products: Use the form to add new products to the database via the backend API.
-- Edit products: Modify the information of existing products using the form and update the changes via the API.
-- Delete products: Remove products from the database via the API with a single click.
-- View products: The table displays the registered products obtained from the API in a clear and organized manner.
+1. Create a service for the products.
+2. Create endpoints for the products, where the endpoints have a noun related to the service.
+3. Use HTTP verbs to perform CRUD operations on the API.
+4. Send information in JSON format.
+5. Ensure the API is stateless.
+
+Other challenges of the API included:
+
+- Connecting the API to the database.
+- Managing the database using an ORM, specifically Sequelize.
+- Using Jest.js and Supertest.js for unit and integration testing.
+- Using Swagger.js to document the API.
+- Using TypeScript for project development.
 
 ## My Process :mountain:
 
@@ -61,8 +74,14 @@ The main challenge of this project is to develop a web application that allows e
 
 The project was built with the following technologies and tools:
 
+- PostgresSQL
 - Node.js
 - Express.js
+- TypeScript
+- Swagger.js
+- Jest.js
+- Supertest.js
+- Colors.js
 - Nodemon
 - Cors
 
@@ -82,8 +101,8 @@ In future development, I plan to enhance the project by adding additional featur
 
 Here are some resources that were helpful in the development of this project:
 
-- [Express.js Documentation](https://expressjs.com/)
-- [Node.js Documentation](https://nodejs.org/)
+- [Express.js](https://expressjs.com/)
+- [Node.js](https://nodejs.org/)
 - [Postman](https://www.postman.com/)
 
 ## API Routes (Partial Listing)
