@@ -10,6 +10,7 @@
   - [What I Learned](#what-i-learned)
   - [Continued Development](#continued-development)
   - [Useful Resources](#useful-resources)
+- [API Routes](#api-routes-partial-listing)
 - [Authors](#author)
 
 ## Overview :writing_hand:
@@ -84,6 +85,17 @@ Here are some resources that were helpful in the development of this project:
 - [Express.js Documentation](https://expressjs.com/)
 - [Node.js Documentation](https://nodejs.org/)
 - [Postman](https://www.postman.com/)
+
+## API Routes (Partial Listing)
+
+```javascript
+const routes = (app: Application) => {
+  app.use("/api/healthcheck", healthcheckRouter);
+  app.use("/api/user", userRouter);
+};
+
+export default routes;
+```
 
 ## Author :nerd_face:
 
