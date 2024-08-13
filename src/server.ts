@@ -3,6 +3,7 @@ import router from "./routes";
 import db from './config/db';
 import colors from 'colors';
 import cors, { CorsOptions } from 'cors';
+import morgan from 'morgan';
 import SwaggerUi from "swagger-ui-express";
 import swaggerSpect, { swaggerUiOptions } from "./config/swagger";
 
@@ -40,6 +41,8 @@ server.use(cors(corsOptions))
 
 // Leer datos de formulario
 server.use(express.json())
+
+server.use(morgan('dev'))
 
 server.use('/api/products', router)
 
