@@ -9,7 +9,7 @@ const db = new Sequelize(process.env.DATABASE_URL!, {
             require: false
         }
     },
-    models: [__dirname + '/../src/models/**.model.ts'],
+    models: [__dirname + '/../src/models/*'],
     logging: false
 })
 
